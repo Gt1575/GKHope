@@ -1,0 +1,52 @@
+body {
+    font-family: Times New Roman, sans-serif;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.milestone {
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.milestone1 { border: 2px solid #00ffff; } /* aqua */
+.milestone2 { border: 2px solid #00ff00; } /* green */
+.milestone3 { border: 2px solid #0000ff; } /* blue */
+.milestone4 { border: 2px solid #ffff00; } /* yellow */
+.milestone5 { border: 2px solid #ff0000; } /* red */
+.milestone6 { border: 2px solid #ff00ff; } /* fuchsia */
+.milestone7 { border: 2px solid #c0c0c0; } /* silver */
+.milestone8 { border: 2px solid #800080; } /* purple */
+.milestone9 { border: 2px solid #008080; } /* teal */
+.milestone10 { border: 2px solid #808000; } /* olive */
+.milestone11 { border: 2px solid #000080; } /* navy */
+.milestone12 { border: 2px solid #800000; } /* maroon */
+.milestone13 { border: 2px solid #008000; } /* green */
+.milestone14 { border: 2px solid #ffa500; } /* orange */
+
+h1 {
+    font-family: Georgia, serif;
+    color: red;
+    text-align: center;  /* center align the title */
+}
+
+.quote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: grey;
+    text-align: center;  /* center align the quote */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
