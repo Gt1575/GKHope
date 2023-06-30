@@ -30,7 +30,7 @@ function initializeCountdown(id, endDate) {
 
 // Initialize the countdown for each milestone
 initializeCountdown('countdown1', new Date(2023, 4, 11));  // Half a year of pure relationship
-initializeCountdown('countdown2', new Date(2023, 6, 15));  // Reunite
+initializeCountdown('countdown2', new Date(2023, 6, 17));  // Reunite
 initializeCountdown('countdown3', new Date(2023, 10, 11));  // 1st year anniversary
 initializeCountdown('countdown4', new Date(2024, 2, 1));  // Junior college graduation for K
 initializeCountdown('countdown5', new Date(2024, 3, 1));  // Applying for universities for K
