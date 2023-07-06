@@ -2,7 +2,7 @@ function calculateCountdown(endDate) {
     var total_seconds = (endDate - new Date()) / 1000;
 
     var years = Math.floor(total_seconds / (3600 * 24 * 365));
-    var months = Math.floor(total_seconds / (3600 * 24 * 30) % 12);
+    var months = Math.floor(total_seconds / (3600 * 24 * 30 * 12));
     var days = Math.floor(total_seconds / 3600 / 24 % 30);
     var hours = Math.floor(total_seconds / 3600 % 24);
     var minutes = Math.floor(total_seconds / 60 % 60);
