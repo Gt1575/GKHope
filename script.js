@@ -34,7 +34,7 @@ initializeCountdown('countdown2', new Date(2023, 6, 17));  // Reunite
 initializeCountdown('countdown3', new Date(2023, 10, 11));  // 1st year anniversary
 initializeCountdown('countdown4', new Date(2024, 2, 1));  // Junior college graduation for K
 initializeCountdown('countdown5', new Date(2024, 3, 1));  // Applying for universities for K
-initializeCountdown('countdown6', new Date(2024, 6, 1));  // Graduation of GT
+initializeCountdown('countdown6', new Date(2024, 6, 10));  // Graduation of GT
 initializeCountdown('countdown7', new Date(2024, 8, 1));  // Reuniting and living together
 initializeCountdown('countdown8', new Date(2024, 10, 11));  // Complete 2 years of relationship and celebrate in Paris
 initializeCountdown('countdown9', new Date(2025, 0, 1));  // Start planning our marriage
