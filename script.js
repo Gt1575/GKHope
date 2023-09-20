@@ -1,12 +1,21 @@
 function calculateCountdown(endDate) {
     var now = new Date();
-    var total_seconds = Math.floor((endDate - now) / 1000);
+    var timeDifference = endDate - now;
 
-    var years = Math.floor(total_seconds / (365 * 24 * 60 * 60));
-    var days = Math.floor((total_seconds % (365 * 24 * 60 * 60)) / (24 * 60 * 60));
-    var hours = Math.floor((total_seconds % (24 * 60 * 60)) / (60 * 60));
-    var minutes = Math.floor((total_seconds % (60 * 60)) / 60);
-    var seconds = Math.floor(total_seconds % 60);
+    if (timeDifference <= 0) {
+        return { years: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    var seconds = Math.floor(timeDifference / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+    var years = Math.floor(days / 365);
+
+    days %= 365;
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
 
     return { years, days, hours, minutes, seconds };
 }
