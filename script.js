@@ -1,14 +1,14 @@
 function calculateCountdown(endDate) {
-    var total_seconds = (endDate - new Date()) / 1000;
+    var now = new Date();
+    var total_seconds = Math.floor((endDate - now) / 1000);
 
-    var years = Math.floor(total_seconds / (3600 * 24 * 365));
-    var months = Math.floor(total_seconds / (3600 * 24 * 30 * 12));
-    var days = Math.floor(total_seconds / 3600 / 24 % 30);
-    var hours = Math.floor(total_seconds / 3600 % 24);
-    var minutes = Math.floor(total_seconds / 60 % 60);
+    var years = Math.floor(total_seconds / (365 * 24 * 60 * 60));
+    var days = Math.floor((total_seconds % (365 * 24 * 60 * 60)) / (24 * 60 * 60));
+    var hours = Math.floor((total_seconds % (24 * 60 * 60)) / (60 * 60));
+    var minutes = Math.floor((total_seconds % (60 * 60)) / 60);
     var seconds = Math.floor(total_seconds % 60);
 
-    return { years, months, days, hours, minutes, seconds };
+    return { years, days, hours, minutes, seconds };
 }
 
 function initializeCountdown(id, endDate) {
@@ -17,10 +17,10 @@ function initializeCountdown(id, endDate) {
     function updateCountdown() {
         var countdown = calculateCountdown(endDate);
 
-        if (countdown.years <= 0 && countdown.months <= 0 && countdown.days <= 0 && countdown.hours <= 0 && countdown.minutes <= 0 && countdown.seconds <= 0) {
+        if (countdown.years <= 0 && countdown.days <= 0 && countdown.hours <= 0 && countdown.minutes <= 0 && countdown.seconds <= 0) {
             countdownElement.innerHTML = "&#10004;"; // Checkmark symbol
         } else {
-            countdownElement.innerHTML = `${countdown.years} years, ${countdown.months} months, ${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, ${countdown.seconds} seconds`;
+            countdownElement.innerHTML = `${countdown.years} years, ${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, ${countdown.seconds} seconds`;
         }
     }
 
@@ -42,4 +42,4 @@ initializeCountdown('countdown10', new Date(2025, 10, 11));  // Get married
 initializeCountdown('countdown11', new Date(2026, 10, 11));  // Start planning for Hope/First wedding anniversary
 initializeCountdown('countdown12', new Date(2027, 3, 1));  // Plan to buy our own house
 initializeCountdown('countdown13', new Date(2027, 10, 28));  // Procreate for Hope
-initializeCountdown('countdown14', new Date(2030, 0, 1));  // Plan another kid 
+initializeCountdown('countdown14', new Date(2030, 0, 1));  // Plan another kid
