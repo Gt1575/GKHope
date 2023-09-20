@@ -42,4 +42,4 @@ initializeCountdown('countdown10', new Date(2025, 10, 11));  // Get married
 initializeCountdown('countdown11', new Date(2026, 10, 11));  // Start planning for Hope/First wedding anniversary
 initializeCountdown('countdown12', new Date(2027, 3, 1));  // Plan to buy our own house
 initializeCountdown('countdown13', new Date(2027, 10, 28));  // Procreate for Hope
-initializeCountdown('countdown14', new Date(2030, 0, 1));  // Plan another kid
+initializeCountdown('countdown14', new Date(2030, 0, 1));  // Plan another kid 
